@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>Hello Electron</title>
-</head>
-<body>
-    <h1><marquee>Hello Electron</marquee></h1>
-</body>
+  </head>
+  <body>
+    <h1><marquee id="marquee">Hello Electron</marquee></h1>
+
+    <button id="btn">Press Me</button>
+
+    <script>
+      let button = document.getElementById("btn");
+      let text = document.getElementById("marquee");
+
+      button.addEventListener("click", () => {
+        text.innerHTML = "You pressed a button";
+        //console.log("button press");
+      });
+    </script>
+  </body>
 </html>
